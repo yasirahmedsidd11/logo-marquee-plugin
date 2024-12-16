@@ -1,0 +1,42 @@
+#lm-image-gallery {
+    display: grid;
+    gap: 16px;
+    grid-template-columns: repeat(3, 1fr);
+    margin-block: 24px;
+}
+
+@media only screen and (max-width:1200px) {
+    #lm-image-gallery {
+
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media only screen and (max-width:960px) {
+    #lm-image-gallery {
+
+        grid-template-columns: 1fr;
+    }
+}
+
+.lm-image-item {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+
+.lm-image-item img {
+    object-fit: contain;
+    border: 1px solid #77777750;
+    padding: 16px;
+    border-radius: 7px;
+}
+
+.lm-remove-image {
+    background-color: #bb2d3b;
+    color: #FFF;
+    border: none;
+    padding: 7px 14px;
+    border-radius: 7px;
+    font-size: 14px;
+}

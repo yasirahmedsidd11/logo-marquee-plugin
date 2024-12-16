@@ -60,7 +60,7 @@ function lm_render_meta_box($post)
                 echo '<div class="lm-image-item">';
                 echo '<img src="' . esc_url($image) . '" width="100" height="100">';
                 echo '<input type="hidden" name="lm_images[]" value="' . esc_url($image) . '">';
-                echo '<button type="button" class="lm-remove-image">Remove</button>';
+                echo '<button type="button" class="lm-remove-image btn btn-danger">Remove</button>';
                 echo '</div>';
             }
         }
@@ -133,7 +133,7 @@ function lm_enqueue_assets($hook)
         wp_enqueue_script('logo-marquee-admin', plugin_dir_url(__FILE__) . 'assets/admin.js', ['jquery'], '1.0.0', true);
 
         // Enqueue the CSS for the Admin Panel
-        wp_enqueue_style('logo-marquee-admin-style', plugin_dir_url(__FILE__) . 'assets/admin.css', [], '1.0.0');
+        wp_enqueue_style('logo-marquee-admin-style', plugin_dir_url(__FILE__) . 'admin.css', [], '1.0.0');
     }
 }
 add_action('admin_enqueue_scripts', 'lm_enqueue_assets');
