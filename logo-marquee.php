@@ -107,8 +107,8 @@ function lm_generate_shortcode($atts)
     ob_start();
     ?>
     <div class="marquee marquee--8" style="--marquee-items: <?php echo count($images); ?>">
-        <?php foreach ($images as $image): ?>
-            <img class="marquee__item" src="<?php echo esc_url($image); ?>" alt="">
+        <?php foreach ($images as $index => $image): ?>
+            <img class="marquee__item" style="--marquee-item-index: <?php echo $index+1; ?>" src="<?php echo esc_url($image); ?>" alt="">
         <?php endforeach; ?>
     </div>
     <?php
